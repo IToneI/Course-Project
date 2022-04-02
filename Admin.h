@@ -115,7 +115,7 @@ public:
             if (usrID == pwdID)
             {
                 cout << "Hey, thats right. \n" << endl;;
-                login();
+                //login();
 
             }
             else
@@ -131,8 +131,15 @@ public:
         }
     }
 
-    void addUser(const string username, const string password)
-    {
+    void addUser()
+    {   
+        string username;
+        string password;
+        cout << "Create login:";
+        cin >> username;
+        cout << endl;
+        cout << "Create password:";
+        cin >> password;
         if (checkFile(username, "users.dat") != 0)
         {
             cout << "That username is not availble." << endl;
